@@ -31,8 +31,8 @@ export class CanvasText {
     this.textHeight = lineHeight + lineHeight * ctxOptions.lineHeight * (lines.length - 1);
 
     // 2 = prevent canvas being 0 size when using empty / null text
-    this.canvas.width = Math.max(2, THREE.Math.ceilPowerOfTwo(this.textWidth + (2 * ctxOptions.horizontalPadding)));
-    this.canvas.height = Math.max(2, THREE.Math.ceilPowerOfTwo(this.textHeight + (2 * ctxOptions.verticalPadding)));
+    this.canvas.width = Math.max(2, THREE.MathUtils.ceilPowerOfTwo(this.textWidth + (2 * ctxOptions.horizontalPadding)));
+    this.canvas.height = Math.max(2, THREE.MathUtils.ceilPowerOfTwo(this.textHeight + (2 * ctxOptions.verticalPadding)));
 
     this.ctx.font = ctxOptions.font
 
